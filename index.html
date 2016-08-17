@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Train Scheduler</title>
+
+  <!-- CSS Bootstrap -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- CSS Custom -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- JS Firebase -->
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+
+</head>
+<body>
+
+  <header class="jumbotron">
+    <div class="text-center">
+      <h1>Ocean to Ocean Express</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div id="currentTime">
+        <!-- Current Time -->
+        </div>
+      </div>
+    </div>
+
+    <div class="train-schedule">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            Current Train Schedule
+          </h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped" id="currentTrains">
+            <thead>
+              <tr>
+                <th id=" ">
+                  Time 
+                </th>
+                <th id=" ">
+                  Track
+                </th>
+                <th id=" ">
+                  Destination
+                </th>
+                <th id=" ">
+                  Due In (mins)
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+            </tbody>
+
+          </table>  
+        </div>
+      </div>
+    </div>
+
+    <div class="form-add-train">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            Add New Train
+          </h3>
+        </div>
+        <div class="panel-body">
+
+          <form class="form-horizontal">
+
+            <div class="form-group">
+              <label for="" class="col-sm-2 control-label">
+                Destination
+              </label>
+              <div class="col-sm-10">
+                <select class="form-control" id="trainDest">
+                  <option>
+                    Beijing
+                  </option>
+                  <option>
+                    Chicago
+                  </option>
+                  <option>
+                    London
+                  </option>
+                  <option>
+                    Paris
+                  </option>
+                  <option>
+                    Tokyo
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="" class="col-sm-2 control-label">
+                Track
+              </label>
+              <div class="col-sm-10">
+                <select class="form-control" id="trainTrck">
+                  <option>
+                    1
+                  </option>
+                  <option>
+                    2
+                  </option>
+                  <option>
+                    3
+                  </option>
+                  <option>
+                    4
+                  </option>
+                  <option>
+                    5
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="" class="col-sm-2 control-label">
+                First Train
+              </label>
+              <div class="col-sm-10">
+                <input type="time" class="form-control" id="trainInit" placeholder=" ">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="" class="col-sm-2 control-label">
+                Frequency
+              </label>
+              <div class="col-sm-10">
+                <div class="input-group">
+                  <input type="number" class="form-control" id="trainFreq" placeholder=" ">
+                  <span class="input-group-addon">mins</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" id="submit">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.js"></script>
+
+  <!-- JS Moment -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+
+  <!-- JS Custom -->
+  <script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+</html>
